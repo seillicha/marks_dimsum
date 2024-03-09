@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dimsum Store</title>
+<link rel="stylesheet" href="style.css">"
+</head>
+<body>
+
+<div id="container">
+    <h2>Dimsum Store</h2>
+    <form id="dimsumForm">
+        <label for="person_name">Person's Name:</label>
+        <input type="text" id="person_name" name="person_name" placeholder="Enter person's name">
+        <label for="item_name">Item Name:</label>
+        <input type="text" id="item_name" name="item_name" placeholder="Enter item name"><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" placeholder="Enter price" step="0.01">
+        <label for="payment">Payment:</label>
+        <input type="number" id="payment" name="payment" placeholder="Enter payment" step="0.01">
+        <button type="button" onclick="calculateChange()">Calculate Change</button>
+        <button type="button" onclick="clearRecords()">Clear</button>
+        <button type="button" onclick="retrieveRecords()">Retrieve Records</button>
+    </form>
+</div>
+
+<div id="records">
+    <h2>Record Details</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Person's Name</th>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Payment</th>
+            <th>Change</th>
+        </tr>
+        <tbody id="recordsBody"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
